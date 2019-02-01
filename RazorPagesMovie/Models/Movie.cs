@@ -21,7 +21,7 @@ namespace RazorPagesMovie.Models {
 
         [Column(TypeName = "decimal(10,2)")]
         [Range(1,100)]
-        [DataType(DataType.Currency)]
+        [DataType(DataType.Currency,ErrorMessage = "podaj poprawną cenę")]
         public decimal Price { get; set; }
 
         [RegularExpression(@"^[A-Z]+[a-zA-Z0-9""'\s-]*$")]
